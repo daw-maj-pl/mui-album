@@ -11,18 +11,22 @@ import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import PhotoCamera from '@material-ui/icons/PhotoCamera';
 
+import useStyles from './styles';
+
 const App = () => {
+  const classes = useStyles();
+
   return (
     <>
       <CssBaseline />
       <AppBar position="relative">
         <Toolbar>
-          <PhotoCamera />
+          <PhotoCamera className={classes.icon} />
           <Typography variant="h6">Photo Album</Typography>
         </Toolbar>
       </AppBar>
       <main>
-        <div>
+        <div className={classes.container}>
           <Container maxWidth="sm">
             <Typography
               variant="h2"
@@ -43,7 +47,7 @@ const App = () => {
               nesciunt eos architecto nisi consequuntur, numquam suscipit
               facilis mollitia id? Necessitatibus, natus?
             </Typography>
-            <div>
+            <div className={classes.buttons}>
               <Grid container spacing={2} justifyContent="center">
                 <Grid item>
                   <Button variant="contained" color="primary">
